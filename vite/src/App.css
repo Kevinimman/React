@@ -1,0 +1,954 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: #ffffff;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  background: #050505;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  height: 78px;
+  padding: 0 7%;
+  background: #050505;
+  border-bottom: 1px solid #242424;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+
+  background: #ffd400;
+  color: #050505;
+
+  display: grid;
+  place-items: center;
+
+  font-weight: 900;
+  border-radius: 5px;
+}
+
+.brand h2 {
+  font-size: 17px;
+  color: #ffffff;
+}
+
+.brand span {
+  font-size: 10px;
+  color: #858585;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #999999;
+  text-decoration: none;
+  font-size: 13px;
+
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: #ffd400;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  min-height: 570px;
+
+  padding: 85px 7%;
+
+  background: #050505;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.status {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #ffd400;
+
+  font-weight: bold;
+
+  margin-bottom: 25px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  display: inline-block;
+
+  background: #ffd400;
+
+  border-radius: 50%;
+
+  margin-right: 8px;
+
+  box-shadow: 0 0 10px #ffd400;
+}
+
+.hero h1 {
+  font-size: 64px;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  font-weight: 300;
+
+  color: #ffffff;
+}
+
+.hero h1 strong {
+  color: #ffd400;
+  font-weight: 800;
+}
+
+.hero-left p {
+  max-width: 560px;
+
+  color: #929292;
+
+  line-height: 1.7;
+
+  margin: 25px 0 32px;
+
+  font-size: 15px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 22px;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+.primary-btn {
+  background: #ffd400;
+
+  color: #050505;
+
+  border: 1px solid #ffd400;
+}
+
+.primary-btn:hover {
+  background: #ffe04a;
+}
+
+.secondary-btn {
+  background: transparent;
+
+  border: 1px solid #444444;
+
+  color: #ffffff;
+}
+
+.secondary-btn:hover {
+  border-color: #ffd400;
+  color: #ffd400;
+}
+
+
+/* ================================
+   INDEX CARD
+================================ */
+
+.index-card {
+  background: #0d0d0d;
+
+  border: 1px solid #292929;
+
+  padding: 30px;
+
+  box-shadow: 0 0 40px rgba(255, 212, 0, 0.04);
+}
+
+.card-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #999999;
+
+  font-size: 11px;
+}
+
+.live-label {
+  color: #ffd400;
+
+  font-weight: bold;
+}
+
+.index-value {
+  font-size: 58px;
+
+  font-weight: 800;
+
+  color: #ffd400;
+
+  margin-top: 28px;
+}
+
+.index-change {
+  color: #ffd400;
+
+  margin-top: 8px;
+
+  font-size: 13px;
+}
+
+.index-change span {
+  color: #777777;
+
+  margin-left: 5px;
+}
+
+
+/* ================================
+   CHART
+================================ */
+
+.chart {
+  height: 140px;
+
+  margin-top: 40px;
+
+  border-bottom: 1px solid #333333;
+
+  display: flex;
+
+  align-items: end;
+
+  gap: 7px;
+}
+
+.bar {
+  flex: 1;
+
+  background: #ffd400;
+
+  opacity: 0.8;
+
+  transition: 0.3s;
+}
+
+.bar:hover {
+  opacity: 1;
+
+  box-shadow: 0 0 12px rgba(255, 212, 0, 0.5);
+}
+
+.b1 {
+  height: 35%;
+}
+
+.b2 {
+  height: 42%;
+}
+
+.b3 {
+  height: 38%;
+}
+
+.b4 {
+  height: 51%;
+}
+
+.b5 {
+  height: 47%;
+}
+
+.b6 {
+  height: 58%;
+}
+
+.b7 {
+  height: 53%;
+}
+
+.b8 {
+  height: 64%;
+}
+
+.b9 {
+  height: 60%;
+}
+
+.b10 {
+  height: 74%;
+}
+
+.b11 {
+  height: 68%;
+}
+
+.b12 {
+  height: 82%;
+}
+
+.chart-labels {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #666666;
+
+  font-size: 9px;
+
+  margin-top: 8px;
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.search-section {
+  background: #0b0b0b;
+
+  padding: 55px 7%;
+
+  border-top: 1px solid #222222;
+
+  border-bottom: 1px solid #222222;
+}
+
+.search-heading span,
+.section-title span,
+.method-left span,
+.sources > span {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #ffd400;
+
+  font-weight: bold;
+}
+
+.search-heading h2 {
+  font-size: 28px;
+
+  margin-top: 8px;
+
+  color: #ffffff;
+}
+
+.search-box {
+  margin-top: 28px;
+
+  padding: 9px;
+
+  border: 1px solid #333333;
+
+  background: #050505;
+
+  display: flex;
+
+  align-items: center;
+
+  max-width: 1000px;
+}
+
+.input-group {
+  flex: 1;
+
+  padding: 5px 18px;
+}
+
+.input-group label {
+  display: block;
+
+  color: #666666;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 6px;
+}
+
+.input-group input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+.input-group input::placeholder {
+  color: #777777;
+}
+
+.swap {
+  color: #ffd400;
+
+  font-size: 18px;
+}
+
+.search-btn {
+  background: #ffd400;
+
+  color: #050505;
+
+  border: none;
+
+  padding: 17px 27px;
+
+  cursor: pointer;
+
+  border-radius: 3px;
+
+  font-weight: bold;
+}
+
+.search-btn:hover {
+  background: #ffe04a;
+}
+
+.search-result {
+  margin-top: 15px;
+
+  color: #888888;
+
+  font-size: 13px;
+}
+
+.search-result strong {
+  color: #ffd400;
+}
+
+
+/* ================================
+   SECTIONS
+================================ */
+
+.section {
+  padding: 80px 7%;
+
+  background: #050505;
+}
+
+.section-title {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: end;
+
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 30px;
+
+  margin-top: 8px;
+
+  color: #ffffff;
+}
+
+.section-title p {
+  color: #777777;
+
+  font-size: 12px;
+}
+
+
+/* ================================
+   STAT CARDS
+================================ */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.stat-card {
+  background: #0c0c0c;
+
+  border: 1px solid #292929;
+
+  padding: 26px;
+
+  transition: 0.2s;
+}
+
+.stat-card:hover {
+  border-color: #ffd400;
+
+  transform: translateY(-3px);
+}
+
+.stat-card span {
+  display: block;
+
+  color: #777777;
+
+  font-size: 11px;
+}
+
+.stat-card strong {
+  display: block;
+
+  font-size: 31px;
+
+  color: #ffd400;
+
+  margin: 15px 0 5px;
+}
+
+.stat-card small {
+  color: #777777;
+
+  font-size: 10px;
+}
+
+
+/* ================================
+   ROUTE TABLE
+================================ */
+
+.route-table {
+  background: #0b0b0b;
+
+  border: 1px solid #292929;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+
+  padding: 20px 25px;
+
+  align-items: center;
+}
+
+.table-header {
+  background: #111111;
+
+  color: #777777;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+}
+
+.table-row {
+  border-top: 1px solid #242424;
+
+  font-size: 13px;
+
+  color: #dddddd;
+}
+
+.table-row strong {
+  color: #ffffff;
+}
+
+.change {
+  color: #ffd400;
+}
+
+.route-status {
+  color: #888888;
+}
+
+.text-btn {
+  background: transparent;
+
+  border: none;
+
+  color: #ffd400;
+
+  cursor: pointer;
+}
+
+
+/* ================================
+   AIRLINES
+================================ */
+
+.airline-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+.airline-card {
+  background: #0c0c0c;
+
+  border: 1px solid #292929;
+
+  padding: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  transition: 0.2s;
+}
+
+.airline-card:hover {
+  border-color: #ffd400;
+}
+
+.airline-icon {
+  width: 45px;
+
+  height: 45px;
+
+  background: #ffd400;
+
+  color: #050505;
+
+  display: grid;
+
+  place-items: center;
+
+  font-weight: 900;
+}
+
+.airline-info {
+  flex: 1;
+}
+
+.airline-info h3 {
+  font-size: 15px;
+
+  margin-bottom: 5px;
+
+  color: #ffffff;
+}
+
+.airline-info span {
+  color: #777777;
+
+  font-size: 10px;
+}
+
+.airline-price {
+  text-align: right;
+}
+
+.airline-price strong {
+  display: block;
+
+  font-size: 17px;
+
+  color: #ffffff;
+}
+
+.airline-price small {
+  color: #ffd400;
+}
+
+
+/* ================================
+   METHODOLOGY
+================================ */
+
+.methodology {
+  background: #ffd400;
+
+  color: #050505;
+
+  padding: 90px 7%;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 100px;
+}
+
+.method-left span {
+  color: #292929;
+}
+
+.method-left h2 {
+  font-size: 40px;
+
+  line-height: 1.2;
+
+  margin: 20px 0;
+}
+
+.method-left p {
+  color: #292929;
+
+  line-height: 1.7;
+
+  max-width: 470px;
+
+  font-size: 14px;
+}
+
+.method-step {
+  display: flex;
+
+  gap: 20px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.method-step b {
+  color: #555555;
+
+  font-size: 12px;
+}
+
+.method-step h3 {
+  font-size: 15px;
+
+  margin-bottom: 7px;
+}
+
+.method-step p {
+  color: #333333;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* ================================
+   DATA SOURCES
+================================ */
+
+.sources {
+  padding: 75px 7%;
+
+  text-align: center;
+
+  background: #050505;
+}
+
+.sources h2 {
+  font-size: 30px;
+
+  margin: 10px 0 35px;
+}
+
+.source-list {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+.source-list div {
+  padding: 14px 22px;
+
+  border: 1px solid #333333;
+
+  color: #999999;
+
+  font-size: 11px;
+
+  transition: 0.2s;
+}
+
+.source-list div:hover {
+  border-color: #ffd400;
+
+  color: #ffd400;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  padding: 30px 7%;
+
+  background: #000000;
+
+  border-top: 1px solid #222222;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #666666;
+}
+
+footer strong {
+  color: #ffd400;
+}
+
+footer p {
+  margin-top: 5px;
+
+  font-size: 10px;
+}
+
+.footer-right {
+  font-size: 10px;
+
+  color: #555555;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .methodology {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 55px 5%;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .stats-grid,
+  .airline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .swap {
+    display: none;
+  }
+
+  .search-btn {
+    margin-top: 10px;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 15px;
+  }
+
+  .table-header span:nth-child(3),
+  .table-header span:nth-child(4),
+  .table-row span:nth-child(3),
+  .table-row span:nth-child(4) {
+    display: none;
+  }
+
+  footer {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+}
